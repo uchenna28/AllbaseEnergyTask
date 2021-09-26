@@ -1,13 +1,102 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif !important;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  margin: auto 0;
+
+  /* max-width: 1500px; */
+  overflow-x: hidden;
+}
+
+.left-section::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard-wrapper .left-section {
+  position: fixed;
+  height: 100vh;
+
+  /* overflow-y: scroll; */
+  width: 300px;
+  padding: 20px 40px 0;
+}
+
+.dashboard-wrapper .right-section {
+  position: relative;
+  left: 300px;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  overflow-y: scroll;
+  padding: 0 40px 100px;
+
+  /* margin-bottom:100px; */
+  margin-right: 40px;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  padding: 15px 20px !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before,
+.ant-tabs-top > div > .ant-tabs-nav::before,
+.ant-tabs-bottom > div > .ant-tabs-nav::before {
+  border-bottom: none !important;
+}
+
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  background-color: #fff !important;
+}
+
+.ant-table-thead tr th {
+  background: none !important;
+}
+
+.ant-tabs-tab-btn:active {
+  color: #eb5757 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #eb5757 !important;
+}
+
+.ant-tabs-tab,
+.ant-tabs-tab:active,
+.ant-tabs-tab-active:active {
+  color: #828282 !important;
+}
+
+.ant-tabs-ink-bar-animated {
+  border-bottom: 2px solid #eb5757 !important;
+}
+
+.ant-switch-checked {
+  background-color: #eb5757 !important;
+}
+
+.dropdown-demo .p-dropdown {
+  width: 14rem !important;
 }
