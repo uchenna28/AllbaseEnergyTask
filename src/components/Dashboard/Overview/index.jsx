@@ -49,6 +49,42 @@ const Index = () => {
   useEffect(() => {
     dispatch(getAllOrders());
   }, [dispatch, orders]);
+
+  const PersonalDetails = [
+    {
+      Name: "Joe Doe", Email: 'joedoe@yahoo.com', Phone: '09134567896', 
+    },
+    {
+      Name: "Joe Doe", Email: 'joedoe@yahoo.com', Phone: '0803567893',
+    },
+    {
+      Name: "Joe Doe", Email: 'joedoe@yahoo.com', Phone: '0913456789',
+    },
+  ]
+  const InstalledDetails = [
+    {
+      name: "Joe Doe",  number: 'AC 67.82.65.78.D2', 
+    },
+    {
+      name: "Joe Doe",  number: 'AC 67.82.65.78.D2', 
+    },
+    {
+      name: "Joe Doe",  number: 'AC 67.82.65.78.D2', 
+    },
+    
+  ]
+  const PaymentDetails = [
+    {
+      deposit: "Auto deposit -Fri, 26th Mar 2021 11:58:03 GM1", paymentId: '16455888999', amount: '100,000.00', 
+    },
+    {
+      deposit: "Auto deposit -Fri, 26th Mar 2021 11:58:03 GM1", paymentId: '16455888999', amount: '100,000.00', 
+    },
+    {
+      deposit: "Auto deposit -Fri, 26th Mar 2021 11:58:03 GM1", paymentId: '16455888999', amount: '100,000.00', 
+    },
+    
+  ]
   const customerDetails = [
     {
       customerName: "Joe Doe", requestType: 'installation', requestDate: '2021-05-20 12:25pm', contactPerson:"Joe Doe-0812346789", status: "Waiting to confirm", action: "Details",
@@ -88,126 +124,83 @@ const Index = () => {
           <Card>
             <div>
             <img src={item.img1} alt="Icon" />
-              {/* <p>{item.heading}</p>
-              <strong>{item.value}</strong> */}
-              
-              {/* <div className="indicator">
-                <div className="arrows">
-                   <img src={item.img1} alt="Icon" />
-                  <img src={item.img2} alt="Icon" />
-                </div>
-                <p className="positive">
-                  {item.percentage}
-                  %
-                </p>
-                <span>this week</span>
-              </div> */}
             </div>
             <div className="card_icon mx-3">
               <strong>{item.value}</strong>
               <p>{item.totalCustomers}</p>
-              {/* <div className="indicator">
-                <div className="arrows">
-                  <img src={item.img1} alt="Icon" />
-                  <img src={item.img2} alt="Icon" />
-                </div>
-                <p className="positive">
-                  {item.percentage}
-                  %
-                </p>
-                <span>this week</span>
-              </div> */}
             </div>
           </Card>
         ))}
       </CardWrapper>
       <h4>Activities</h4>
-      <div className="row mt-5">
-        <div className="col-md-7">
-          <div className="row">
-            <div className="col-md-5 border shadow ">
-              <div className="row">
-                <div className="col-md-12">
-                  <p>ggggggggggggg</p>
-                  <p>fhdhhdhhhhh</p>
-                </div>
-                <div className="row">
-                  <div className="col-md-5 border-top">
-                    <p>ggggggggg</p>
-                    <p>hhshhcbsbb</p>
-                  </div>
-                  <div className="col-md-3 border-top">
-                    <p>ggggggg</p>
-                  </div>
-                  <div className="col-md-4 border-top">
-                    <img src="" />
-                  </div>
-                  </div>
-                  <div className="row">
-                  <div className="col-md-5 border-top">
-                    <p>ggggggggg</p>
-                    <p>hhshhcbsbb</p>
-                  </div>
-                  <div className="col-md-3 border-top">
-                    <p>ggggggg</p>
-                  </div>
-                  <div className="col-md-4 border-top">
-                    <img src="" />
-                  </div>
-                  </div>
-                  <div class="col-md-12 border-top">
-              <h6></h6>
-              <p></p>
+      <div className="row">
+        <div className="col-md-4">
+          <div className="border shadow">
+          <div className=""  style={{ backgroundColor: "#1EB2A6"}}>
+           <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"600", fontSize:"18px", lineHeight:"22px", color: "#ffff"}}>Recent Customers</p>
+           <p  style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"12px", lineHeight:"14px", color: "white"}}>Most Recent Lists of Customers</p>
+           </div>
+           {PersonalDetails.map((item, i) => (
+           <div className="row" key={i}>
+             <div className="col-md-5 border-top">
+               <h6>{item.Name}</h6>
+               <p>{item.Email}</p>
               </div>
-              <div class="col-md-12 border-top d-flex justify-content-center" style={{ backgroundColor: "rgba(30, 178, 166, 0.04);"}}>
-              <p>ghhhhhhhhhhhh</p>
-              </div>
-            </div>
-            </div>
-            <div className="col-md-1"></div>
-           <div className="col-md-6 border">
-             <div className="row">
-             <div className="col-md-12">
-                  <p>ggggggggggggg</p>
-                  <p>fhdhhdhhhhh</p>
-                </div>
-                </div>
-
+               <div className="col-md-4 border-top">
+                <p>{item.Phone}</p>
+               </div>
+               <div className="col-md-3 border-top"></div>
+             </div>
+           ))}
+           <div className="col-md-12 d-flex justify-content-center border-top">
+             <p>hdjjkkk</p>
+             </div>
+             </div>
+        </div>
+        <div className="col-md-5">
+        <div className="border shadow">
+          <div className=""  style={{ backgroundColor: " #1EB2A6"}}>
+           <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"600", fontSize:"18px", lineHeight:"22px", color: "#ffff"}}>Successful payment</p>
+           <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"12px", lineHeight:"14px", color: "white"}}>Most Recent Lists of Successful Payments </p>
+           </div>
+           {PaymentDetails.map((item, i) => (
+           <div className="row" key={i}>
+             <div className="col-md-8 border-top">
+               <p className="ml-2">{item.deposit}</p>
+               <p>{item.paymentId}</p>
+               </div>
+               <div className="col-md-4 border-top">
+               <p>{item.amount}</p>
+               </div>
                
+             </div>
+             ))}
+             <div className="col-md-12 d-flex justify-content-center border-top">
+             <p>hdjjkkk</p>
+             </div>
+             </div>
+        </div>
+        <div className="col-md-3">
+        <div className="border shadow" >
+          <div className=""  style={{ backgroundColor: " #1EB2A6"}}>
+           <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"600", fontSize:"18px", lineHeight:"22px", color: "#ffff"}}>Installed System</p>
+           <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"12px", lineHeight:"14px", color: "white"}}>Most Installed System </p>
+           </div>
+           {InstalledDetails.map((item, i) => (
+           <div className="row" key={i}>
+           <div className="col-md-12 border-top">
+             <p>{item.number}</p>
+             <p>{item.name}</p>
+             </div>
+             </div>
+             ))}
            </div>
         </div>
-          </div>
-          <div className="col-md-1"></div>
-        <div className="col-md-4 border shadow" style={{ borderRadius: " 20px !important"}} >
-          {/* <div className="border" > */}
-          <div className="row">
-            <div class="col-md-12 border-top" style={{ backgroundColor: " #1EB2A6"}}>
-              <p>gggggggggggg</p>
-              <p>fhhhhhhh</p>
-              </div>
-              <div class="col-md-12 border-top">
-              <h6>gggggggggggg</h6>
-              <p>fhhhhhhh</p>
-              </div>
-              <div class="col-md-12 border-top">
-              <h6>gggggggggggg</h6>
-              <p>fhhhhhhh</p>
-              </div>
-              <div class="col-md-12 border-top">
-              <h6></h6>
-              <p></p>
-              </div>
-              <div class="col-md-12 border-top d-flex justify-content-center" style={{ backgroundColor: "rgba(30, 178, 166, 0.04);"}}>
-              <p>ghhhhhhhhhhhh</p>
-              </div>
-            </div>
-          </div>
-          </div>
-          <h4 className="my-2" style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"normal", fontSize:"15px", lineHeight:"18px", color: "#526A98"}}>Upcoming appointments</h4>
-          {/* </div> */}
+        </div>
+        <h6 className="my-2">Upcoming appointments</h6>
       <div className="row border shadow">
         <div className="col-md-10">
-          <p className="pending-font" style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"600", fontSize:"18px", lineHeight:"22px", color: "#1EB2A6"}}>Pending Installation request</p>
+          <p className="" style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"600", fontSize:"18px", lineHeight:"22px", color: "#1EB2A6"}}>Pending Installation request</p>
         </div>
         <div className="col-md-2 d-flex justify-content-end">
           <p   style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"14px", lineHeight:"17px", color: "#1EB2A6"}}>view all</p>
@@ -258,72 +251,7 @@ const Index = () => {
         </div>
         </div>
         ))}
-        {/* <div className="col-md-12 border-top"> 
-        <div className="row">
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-        </div>
-        </div>
-        <div className="col-md-12 border-top"> 
-        <div className="row">
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-        </div>
-        </div>
-        <div className="col-md-12 border-top"> 
-        <div className="row">
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-            <div className="col-md-2">
-              <p>djjddjjj</p>
-            </div>
-        </div>
-        </div> */}
+        
       </div>
     </Container>
   );

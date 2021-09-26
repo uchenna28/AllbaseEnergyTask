@@ -71,8 +71,9 @@ export const Tabs = styled(Link)`
   text-decoration: none;
   color: #000000;
   font-size: 15px;
+  font-family: Hk Grotesk;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 18px;
   letter-spacing: 0.03em;
   text-align: left;

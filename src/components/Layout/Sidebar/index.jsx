@@ -13,15 +13,15 @@ import { ReactComponent as Icon2 } from '../../../assets/db_icons/inventoryIcon.
 import { ReactComponent as Icon3 } from '../../../assets/db_icons/crmIcon.svg';
 import { ReactComponent as Icon4 } from '../../../assets/db_icons/crmIcon.svg';
 import { ReactComponent as Icon5 } from '../../../assets/db_icons/icon5.svg';
-import { ReactComponent as Icon6 } from '../../../assets/db_icons/icon6.svg';
-import { ReactComponent as Icon7 } from '../../../assets/db_icons/icon7.svg';
+import { ReactComponent as Icon6 } from '../../../assets/db_icons/device.svg';
+import { ReactComponent as Icon7 } from '../../../assets/db_icons/ticket.svg';
 import { ReactComponent as Icon1A } from '../../../assets/db_icons/icon1O.svg';
 import { ReactComponent as Icon2A } from '../../../assets/db_icons/icon2O.svg';
 import { ReactComponent as Icon3A } from '../../../assets/db_icons/icon3O.svg';
 // import { ReactComponent as Icon4A } from "../../../assets/db_icons/icon4O.svg";
 import { ReactComponent as Icon5A } from '../../../assets/db_icons/icon5O.svg';
 import { ReactComponent as Icon6A } from '../../../assets/db_icons/icon6O.svg';
-import { ReactComponent as Icon7A } from '../../../assets/db_icons/icon7O.svg';
+import { ReactComponent as Icon7A } from '../../../assets/db_icons/ticket.svg';
 
 const Sidebar = ({ isDefault }) => {
   const [active, setActive] = React.useState({
