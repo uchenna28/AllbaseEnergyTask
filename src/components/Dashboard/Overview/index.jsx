@@ -6,50 +6,14 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { Spin } from 'antd';
-import Table from '../Order/table';
 import Container, {
   Card,
   CardWrapper,
-  Notifications,
-  TableWrapper,
-  ViewAll,
 } from './styles';
 import {
-  alertIcon,
-  group,
-  red,
-  blue,
-  yellow,
-  redArrowDown,
-  redArrowUp,
-  greenArrowDown,
-  greenArrowUp,
-  flowArrow,
-  naira,
   circle
 } from '../Constants/images';
-import Searchbar from '../../ReUsable/searchbar';
-// import Chart from './chart';
-import DatePicker from '../../ReUsable/datePicker';
-import { getAllOrders } from '../../../redux/actions';
-
 const Index = () => {
-  const orderList = useSelector((state) => state.orderList);
-  const notificationList = useSelector(
-    (state) => state.notificationList.notifications,
-  );
-  // const auth = useSelector((state) => state.auth);
-  // const TodayOrder = useSelector((state) => state.auth.TodayOrder);
-  // const TotalRevenue = useSelector((state) => state.auth.TotalRevenue);
-  const { orders } = orderList;
-  // console.log(orders);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getAllOrders());
-  }, [dispatch, orders]);
-
   const PersonalDetails = [
     {
       Name: "Joe Doe", Email: 'joedoe@yahoo.com', Phone: '09134567896', 

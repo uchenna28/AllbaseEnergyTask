@@ -6,34 +6,15 @@ import Container, { NavItems, Toggle } from './_styles.modules';
 import user from '../../../assets/user.png';
 import emailIcon from '../../../assets/emailIcon.png';
 import notificationIcon from '../../../assets/notificationIcon.png';
-import { ReactComponent as DropDownIcon } from '../../../assets/chevrondown.svg';
-import { ReactComponent as Notification } from '../../../assets/notification.svg';
-import { ReactComponent as NotificationEmpty } from '../../../assets/notification_empty.svg';
-// import CustomButton from '../../ReUsable/button';
 import { logout, profileIcon } from '../../Dashboard/Constants/images';
 
 const Navbar = ({onToggle}) => {
-  const navigator = useHistory();
-  // const email = useSelector((state) => state.auth.email);
-  // console.log(email);
-  const notificationList = useSelector(
-    (state) => state.notificationList.notifications,
-  );
-
-  const signout = () => {
-    localStorage.clear();
-    navigator.push('/signup');
-  };
 
   const menu = (
     <Menu>
       <Menu.Item key="0">
         <img src={profileIcon} alt="Icon" />
         <span style={{ marginLeft: 10 }}>Profile</span>
-      </Menu.Item>
-      <Menu.Item key="1" onClick={signout}>
-        <img src={logout} alt="Icon" />
-        <span style={{ color: '#BE0019', marginLeft: 10 }}>Logout</span>
       </Menu.Item>
     </Menu>
   );

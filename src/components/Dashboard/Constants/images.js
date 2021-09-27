@@ -1,25 +1,3 @@
-export { default as group } from '../../../assets/group_ind.svg';
-export { default as red } from '../../../assets/red.svg';
-export { default as yellow } from '../../../assets/yellow.svg';
-export { default as blue } from '../../../assets/blue.svg';
-export { default as redArrowUp } from '../../../assets/red_arrow_up.svg';
-export { default as redArrowDown } from '../../../assets/red_arrow_down.svg';
-export { default as greenArrowUp } from '../../../assets/green_arrow_up.svg';
-export { default as greenArrowDown } from '../../../assets/green_arrow_down.svg';
-export { default as flowArrow } from '../../../assets/ind_arrow.svg';
-export { default as naira } from '../../../assets/naira.svg';
-export { default as alertIcon } from '../../../assets/alert.svg';
-export { default as plusIcon } from '../../../assets/plus.svg';
-export { default as edit } from '../../../assets/edit.svg';
-export { default as view } from '../../../assets/view.svg';
-export { default as remove } from '../../../assets/remove.svg';
+
 export { default as profileIcon } from '../../../assets/vector.svg';
-export { default as logout } from '../../../assets/logout.svg';
-export { default as avatarOutline } from '../../../assets/avatar_outline.svg';
-export { default as close } from '../../../assets/close.svg';
-export { default as orderImg } from '../../../assets/order.svg';
-export { default as deleteImg } from '../../../assets/delete-black.svg';
-export { default as camera } from '../../../assets/camera.svg';
-export { default as setup } from '../../../assets/setup.svg';
-export { default as imageSetup } from '../../../assets/imageSetup.svg';
 export { default as circle } from '../../../assets/circle.png';
