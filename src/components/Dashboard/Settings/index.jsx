@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import Container, { Options } from './styles';
+import Container from './styles';
 
 const index = () => (
   <Container>

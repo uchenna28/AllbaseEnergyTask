@@ -1,16 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Spin } from 'antd';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import sideImage from '../../../assets/sideIcon.png';
 import accountheader from '../../../assets/accountImg.png';
-import { useHistory } from 'react-router-dom';
-import { LoadingOutlined } from '@ant-design/icons';
-import { Redirect } from 'react-router-dom';
-import kexzeLogo from '../../../assets/logo.svg';
 import './createpassword.css';
-import { login } from '../../../redux/actions';
 
 /**
  * @author
@@ -18,38 +11,12 @@ import { login } from '../../../redux/actions';
  * */
 
 const ForgotPassword = () => {
-  const history = useHistory();
-  const [password, setPassword] = useState('');
-  const [confirmpassword, setConfirmPassword] = useState('');
-  // const loading = useSelector((state) => state.auth.loading);
-  const antIcon = <LoadingOutlined style={{ fontSize: 24, color: 'white' }} spin />;
-  // const [error, setError] = useState("");
-  // const [checked, setChecked] = useState(true);
-  const auth = useSelector((state) => state.auth);
 
-  const dispatch = useDispatch();
-
-  const SignUpVendor = () => {
-    history.push('/setuppage')
-    // e.preventDefault();
-
-    // const user = {
-    //   password,
-    //   confirmpassword,
-    // };
-
-    // dispatch(login(user));
-  };
-
-  // if (auth.authenticate) {
-  //   return <Redirect to="/" />;
-  // }
   return (
     <div className="cont">
       <div className="row">
         <div className="col-4 side">
           <img alt="Kexze-logo" src={sideImage} />
-          {/* <p>Admin Dashboard</p> */}
         </div>
         <div className="col-8 main">
           <div className="loginContainer">

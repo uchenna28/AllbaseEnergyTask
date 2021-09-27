@@ -4,7 +4,6 @@ import axios from '../../helpers/axios';
 
 export const login = (user) => async (dispatch) => {
   dispatch({ type: authConstants.LOGIN_REQUEST });
-  // try {
   const res = await axios.post('/api/login', {
     ...user,
   });
@@ -13,18 +12,11 @@ export const login = (user) => async (dispatch) => {
       {
         token
       } = res.data;
-    // const { email } = res.data.Admin;
     localStorage.setItem('token', token);
-    console.log(token);
-    // localStorage.setItem('user', JSON.stringify(user));
     dispatch({
       type: authConstants.LOGIN_SUCCESS,
       payload: {
         token,
-        // user,
-        // TodayOrder,
-        // TotalRevenue,
-        // email,
       },
       
     });
@@ -53,12 +45,3 @@ export const isUserLoggedIn = () => async (dispatch) => {
     });
   }
 };
-
-// // export const signout = () => {
-// //   return async dispatch => {
-// //     localStorage.clear();
-//     dispatch({
-// //       type: authConstants.LOGOUT_REQUEST
-// //     });
-// //   }
-// // }

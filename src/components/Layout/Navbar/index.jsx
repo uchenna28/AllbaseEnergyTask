@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { Menu, Dropdown } from 'antd';
-import { useHistory, Link } from 'react-router-dom';
+import { Menu } from 'antd';
 import Container, { NavItems, Toggle } from './_styles.modules';
 import user from '../../../assets/user.png';
 import emailIcon from '../../../assets/emailIcon.png';
 import notificationIcon from '../../../assets/notificationIcon.png';
-import { logout, profileIcon } from '../../Dashboard/Constants/images';
+import { profileIcon } from '../../Dashboard/Constants/images';
 
 const Navbar = ({onToggle}) => {
 

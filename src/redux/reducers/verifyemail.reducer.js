@@ -4,14 +4,6 @@ import { verifyEmailConstants } from '../actions/constants';
 const initState = {
   loading: false,
   token: null,
-  // message: null,
-  // user: {
-  //   email: '',
-  //   fullName: '',
-  //   firstName: '',
-  //   lastName: '',
-  //   phone: '',
-  // },
   authenticate: false,
   authenticating: false,
 };
@@ -29,18 +21,11 @@ export default (state = initState, action) => {
       state = {
         ...state,
         loading: false,
-        // user: action.payload.user,
         token: action.payload.token,
-        // meaasage: action.payload.message,
         authenticate: true,
         authenticating: false,
       };
       break;
-    // case ve.LOGOUT_REQUEST:
-    //   state = {
-    //     ...initState,
-    //   };
-    //   break;
   }
 
   return state;

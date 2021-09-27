@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from '../../../helpers/axios';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import sideImage from '../../../assets/sideIcon.png';

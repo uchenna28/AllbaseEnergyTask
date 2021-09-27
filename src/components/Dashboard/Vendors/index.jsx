@@ -1,8 +1,7 @@
 /* eslint-disable import/named */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import Container from './styles';
 import 'antd/dist/antd.css';
 import '../../../App.css';

@@ -4,16 +4,6 @@ import { authConstants } from '../actions/constants';
 const initState = {
   loading: false,
   token: null,
-  TotalRevenue: 0,
-  TodayOrder: 0,
-  email: null,
-  user: {
-    email: '',
-    fullName: '',
-    firstName: '',
-    lastName: '',
-    phone: '',
-  },
   authenticate: false,
   authenticating: false,
 };
@@ -31,11 +21,7 @@ export default (state = initState, action) => {
       state = {
         ...state,
         loading: false,
-        user: action.payload.user,
         token: action.payload.token,
-        TotalRevenue: action.payload.TotalRevenue,
-        TodayOrder: action.payload.TodayOrder,
-        email: action.payload.email,
         authenticate: true,
         authenticating: false,
       };

@@ -2,10 +2,7 @@
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable react/no-array-index-key */
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { Spin } from 'antd';
+import React from 'react';
 import Container, {
   Card,
   CardWrapper,
@@ -107,17 +104,17 @@ const Index = () => {
            {PersonalDetails.map((item, i) => (
            <div className="row" key={i}>
              <div className="col-md-5 border-top">
-               <h6>{item.Name}</h6>
-               <p>{item.Email}</p>
+               <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.Name}</p>
+               <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.Email}</p>
               </div>
                <div className="col-md-4 border-top">
-                <p>{item.Phone}</p>
+                <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.Phone}</p>
                </div>
                <div className="col-md-3 border-top"></div>
              </div>
            ))}
            <div className="col-md-12 d-flex justify-content-center border-top">
-             <p>hdjjkkk</p>
+             <p>All Customers</p>
              </div>
              </div>
         </div>
@@ -130,17 +127,17 @@ const Index = () => {
            {PaymentDetails.map((item, i) => (
            <div className="row" key={i}>
              <div className="col-md-8 border-top">
-               <p className="ml-2">{item.deposit}</p>
-               <p>{item.paymentId}</p>
+               <p className="ml-2" style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.deposit}</p>
+               <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.paymentId}</p>
                </div>
                <div className="col-md-4 border-top">
-               <p>{item.amount}</p>
+               <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.amount}</p>
                </div>
                
              </div>
              ))}
              <div className="col-md-12 d-flex justify-content-center border-top">
-             <p>hdjjkkk</p>
+             <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>All Payment</p>
              </div>
              </div>
         </div>
@@ -153,12 +150,15 @@ const Index = () => {
            {InstalledDetails.map((item, i) => (
            <div className="row" key={i}>
            <div className="col-md-12 border-top">
-             <p>{item.number}</p>
-             <p>{item.name}</p>
+             <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.number}</p>
+             <p style={{ fontFamily: "HK Grotesk", fontStyle:"normal", fontWeight:"500", fontSize:"15px", lineHeight:"18px", color: "#333333"}}>{item.name}</p>
              </div>
              </div>
              ))}
            </div>
+           <div className="col-md-12 d-flex justify-content-center border-top">
+             <p>All Details</p>
+             </div>
         </div>
         </div>
         <h6 className="my-2">Upcoming appointments</h6>
