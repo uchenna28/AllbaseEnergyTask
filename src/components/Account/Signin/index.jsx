@@ -20,8 +20,6 @@ const Signin = () => {
   const [password, setPassword] = useState('');
   const loading = useSelector((state) => state.auth.loading);
   const antIcon = <LoadingOutlined style={{ fontSize: 24, color: 'white' }} spin />;
-  // const [error, setError] = useState("");
-  // const [checked, setChecked] = useState(true);
   const auth = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
@@ -75,7 +73,7 @@ const Signin = () => {
                 <div className="others d-flex justify-content-center">
                 <p>
                    Don&apos;t have an account?
-                <Link to="/">
+                <Link to="/signup">
                 <i> Create account?</i>
                 </Link>
                 </p>

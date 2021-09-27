@@ -18,8 +18,8 @@ import {
 const App = () => (
   <Router>
     <Switch>
-      <Route path="/" component={SignUp} exact  />
-      <Route path="/login" component={Signin} exact />
+      <Route path="/signup" component={SignUp} exact  />
+      <Route path="/" component={Signin} exact />
       <Route path="/createpassword" component={CreatePassword} exact />
       
       <Layout>

@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from '../../../helpers/axios';
 import { Spin } from 'antd';
@@ -22,34 +21,11 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const loading = useSelector((state) => state.verifyEmailList.loading);
-  // console.log(loading);
   const antIcon = <LoadingOutlined style={{ fontSize: 24, color: 'white' }} spin />;
-  // const message = useSelector((state) => state.verifyEmailList.message);
   const verifyEmailList = useSelector((state) => state.verifyEmailList);
-  // console.log(authenticate);
-  // const log = true;
+  
 
   const dispatch = useDispatch();
-  // const history = useHistory();
-  // const setPages = () => {
-    // e.preventDefault();
-    // history.push('/otppage')
-  // }
-  // const signupUser = async (e) => {
-  //   e.preventDefault();
-  //   const user = {
-  //         email,
-            // password
-  //       };
-  //   // axios.post('/vendor/verify-email', {... user })
-  //   //   .then((res) => (res.data));
-  //   //   if (log) {
-  //   //     // console.log(authenticate);
-  //   //      <Redirect to="/otppage" />;
-  //   //       // }
-  //   //  }
-  //   // dispatch(getAllOrders());
-  // };
   const signupUser = (e) => {
     e.preventDefault();
 
@@ -80,22 +56,22 @@ const SignUp = () => {
                   <p className="small-font">Enter your email and use a password to begin</p>
                 </div>
                 <form onSubmit={signupUser}>   
-              <div className="my-1 d-flex justify-content-center">
+              <div className="my-3 d-flex justify-content-center">
                 <input type="text"   name="" id=""  placeholder="Fullname" required />
               </div>
-              <div className="my-1 d-flex justify-content-center">
+              <div className="my-3 d-flex justify-content-center">
                 <input type="email"value={email} onChange={(e) => setEmail(e.target.value)} name="" id=""  placeholder="Email" required />
               </div> 
-              <div className="my-1 d-flex justify-content-center">
+              <div className="my-3 d-flex justify-content-center">
                 <input type="number" name="" id=""  placeholder="Phone" required />
               </div> 
-              <div className="my-1 d-flex justify-content-center">
+              <div className="my-3 d-flex justify-content-center">
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="" id=""  placeholder="Password" required />
               </div> 
-              <div className="my-1 d-flex justify-content-center">
+              <div className="my-3 d-flex justify-content-center">
                 <input type="password"  value={password} onChange={(e) => setPassword(e.target.value)} name="" id=""  placeholder="Confirm password" required />
               </div> 
-              <div className="my-3 d-flex justify-content-center">
+              <div className="my-5 d-flex justify-content-center">
                 <button type="submit" className="signinBtn d-flex">
                 {loading ? (<Spin indicator={antIcon} />) : 'Create account' }
                 </button>
