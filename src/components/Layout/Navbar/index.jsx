@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu } from 'antd';
+// import { Menu } from 'antd';
 import Container, { NavItems, Toggle } from './_styles.modules';
 import user from '../../../assets/user.png';
 import emailIcon from '../../../assets/emailIcon.png';
 import notificationIcon from '../../../assets/notificationIcon.png';
-import { profileIcon } from '../../Dashboard/Constants/images';
+// import { profileIcon } from '../../Dashboard/Constants/images';
 
 const Navbar = ({onToggle}) => {
 
