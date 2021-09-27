@@ -8,14 +8,14 @@ import { profileIcon } from '../../Dashboard/Constants/images';
 
 const Navbar = ({onToggle}) => {
 
-  const menu = (
-    <Menu>
-      <Menu.Item key="0">
-        <img src={profileIcon} alt="Icon" />
-        <span style={{ marginLeft: 10 }}>Profile</span>
-      </Menu.Item>
-    </Menu>
-  );
+  // const menu = (
+  //   <Menu>
+  //     <Menu.Item key="0">
+  //       <img src={profileIcon} alt="Icon" />
+  //       <span style={{ marginLeft: 10 }}>Profile</span>
+  //     </Menu.Item>
+  //   </Menu>
+  // );
   const [scrolled, setScrolled] = useState(false);
 
   const handleNavScroll = () => {
